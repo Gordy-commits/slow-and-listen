@@ -64,15 +64,18 @@ const App: React.FC = () => {
     <div className="min-h-screen font-sans bg-warm-50 text-warm-900 selection:bg-warm-200 pb-20 md:pb-0">
       
       {/* Top Navigation (Added for better accessibility) */}
+	  {/* 暫時隱藏新增按鈕
       <nav className="fixed top-0 w-full z-40 p-6 flex justify-end pointer-events-none">
         <button 
-          onClick={() => setIsCreatorOpen(true)}
+          onClick={() => setIsCreatorOpen(false)}
           className="pointer-events-auto flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-sm rounded-full shadow-sm border border-warm-200 text-warm-800 font-sans font-bold text-sm hover:bg-white hover:shadow-md hover:scale-105 transition-all duration-300"
         >
           <PenSquare className="w-4 h-4" />
           <span>書寫貼文</span>
         </button>
+		
       </nav>
+	  */}
 
       {/* Hero Section */}
       <section className="h-screen w-full relative flex flex-col items-center justify-center p-4 overflow-hidden">
@@ -175,7 +178,7 @@ const App: React.FC = () => {
             閉眼睛、深呼吸、站起身、動一動。
           </p>
 		  {/* 🔴 隱藏方法：把不要的按鈕用大括號和星號包起來 */}
-    {/*
+			{/*
 		  
           <button 
             onClick={() => setIsCreatorOpen(true)}
@@ -193,12 +196,15 @@ const App: React.FC = () => {
       </footer>
 
       {/* Creator Button (Mobile) */}
+	  {/*
       <button 
         onClick={() => setIsCreatorOpen(true)}
         className="fixed bottom-6 left-6 z-40 p-4 bg-warm-100 rounded-full shadow-lg hover:bg-white transition-colors border border-warm-200 md:hidden"
       >
         <PenSquare className="w-6 h-6 text-warm-800" />
+		
       </button>
+	  */}
 
       {/* Overlays */}
       <Modal 
